@@ -1,0 +1,49 @@
+{
+	"format_version": 2,
+	"metadata": {
+	  "authors": [
+		"wuw.sh"
+	  ],
+	  "url": "https://github.com/wuw-shz",
+	  "license": "MIT"
+	},
+	"header": {
+	  "name": "Max's Block Entity",
+	  "description": "@wuw.sh",
+	  "min_engine_version": [
+		1,
+		20,
+		80
+	  ],
+	  "uuid": "385b7ada-0c45-4917-b831-bf3097e4a75f",
+	  "version": [
+		1,
+		0,
+		0
+	  ]
+	},
+	"modules": [
+	  {
+		"type": "script",
+		"description": "@minecraft/server | @minecraft/server-ui",
+		"language": "javascript",
+		"uuid": "4aa29dea-7fcf-4151-90ea-894958bd0588",
+		"entry": "scripts/server/index.js",
+		"version": [
+		  1,
+		  11,
+		  0
+		]
+	  }
+	],
+	"dependencies": [
+	  {
+		"module_name": "@minecraft/server",
+		"version": "1.11.0-beta"
+	  },
+	  {
+		"module_name": "@minecraft/server-ui",
+		"version": "1.2.0-beta"
+	  }
+	]
+  }
