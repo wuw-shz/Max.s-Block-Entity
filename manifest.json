@@ -8,7 +8,7 @@
 	  "license": "MIT"
 	},
 	"header": {
-	  "name": "Max's Block Entity",
+	  "name": "Max's Block Entity (MBE)",
 	  "description": "@wuw.sh",
 	  "min_engine_version": [
 		1,
