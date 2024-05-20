@@ -29,7 +29,7 @@ To development the Max's Block Entity locally, follow these steps:
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to English Words Searcher, please follow these steps:
+Contributions are welcome! If you'd like to contribute to Max's Block Entity, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
