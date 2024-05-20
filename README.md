@@ -2,7 +2,11 @@
 
 Original developed by Reddit user [u/Maxed_Out10](https://www.reddit.com/user/Maxed_Out10/) allows you to create near-perfect entity replications of any Minecraft block using armour stands
 
-##### Bedrock Wiki: [MBE - Max's Block Entity](https://wiki.bedrock.dev/commands/block-entities.html)
+**Bedrock Wiki**: [MBE - Max's Block Entity](https://wiki.bedrock.dev/commands/block-entities.html)
+
+**MCBE Library Dependencies**
+ - ([@lib/minecraft](./src//library/minecraft/)) [@notbeer-api](https://github.com/notbeer/Gametest-API-Wrapper) from [WorldEdit-BE](https://github.com/SIsilicon/WorldEdit-BE)
+ - ([@lib/math](./src/library/math/)) [@minecraft/math](https://github.com/Mojang/minecraft-scripting-libraries)
 
 ## Getting Started
 
