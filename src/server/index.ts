@@ -3,48 +3,49 @@ import { Server } from "@lib/minecraft";
 import { MBE, MBETypes } from "./mbe";
 import { registerInformation } from "library/minecraft/@types/classes/CommandBuilder";
 
-const fullRegInfo: registerInformation = {
-  name: "full",
-  aliases: ["f"],
-  description: "Spawn full MBE",
-  usage: [
-    {
-      name: "tileName",
-      type: "string",
-      default: false,
-    },
-    {
-      name: "position",
-      type: "xyz",
-      default: false,
-    },
-  ],
+const regInfo: { full: registerInformation; mini: registerInformation } = {
+  full: {
+    name: "full",
+    aliases: ["f"],
+    description: "Spawn full MBE",
+    usage: [
+      {
+        name: "tileName",
+        type: "string",
+        default: false,
+      },
+      {
+        name: "position",
+        type: "xyz",
+        default: false,
+      },
+    ],
+  },
+  mini: {
+    name: "mini",
+    aliases: ["m"],
+    description: "Spawn mini MBE",
+    usage: [
+      {
+        name: "tileName",
+        type: "string",
+        default: false,
+      },
+      {
+        name: "position",
+        type: "xyz",
+        default: false,
+      },
+    ],
+  },
 };
 
-const miniRegInfo: registerInformation = {
-  name: "mini",
-  aliases: ["m"],
-  description: "Spawn mini MBE",
-  usage: [
-    {
-      name: "tileName",
-      type: "string",
-      default: false,
-    },
-    {
-      name: "position",
-      type: "xyz",
-      default: false,
-    },
-  ],
-};
-
-Server.command.register(fullRegInfo, (session, msg, args) => {
+Server.command.register(regInfo.full, (session, msg, args) => {
   new MBE(session, args.get("tileName"), args.get("position")).spawnFull();
   return void 0;
 });
 
-Server.command.register(miniRegInfo, (session, msg, args) => {
+Server.command.register(regInfo.mini, (session, msg, args) => {
   new MBE(session, args.get("tileName"), args.get("position")).spawnMini();
   return void 0;
 });
