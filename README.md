@@ -1,6 +1,6 @@
 # Max's Block Entity (MBE)
 
-Original developed by Reddit user [u/Maxed_Out10](https://www.reddit.com/user/Maxed_Out10/) allows you to create near-perfect entity replications of any Minecraft block using armour stands
+Original developed by Reddit user [u/Maxed_Out10](https://www.reddit.com/user/Maxed_Out10/) allows you to create near-perfect entity replications of any Minecraft block using armor stands
 
 **Bedrock Wiki**: [MBE - Max's Block Entity](https://wiki.bedrock.dev/commands/block-entities.html)
 

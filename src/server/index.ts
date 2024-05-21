@@ -1,23 +1,52 @@
 import * as sv from "@minecraft/server";
 import { Server } from "@lib/minecraft";
 import { MBE, MBETypes } from "./mbe";
+import { registerInformation } from "library/minecraft/@types/classes/CommandBuilder";
 
-sv.world.beforeEvents.chatSend.subscribe((ev) => {
-  const sender = ev.sender;
-  const msg = ev.message;
-  if (msg.startsWith("-")) {
-    ev.cancel = true;
-    const mbe = new MBE(sender);
-    const cmd = msg.slice(1);
-    switch (cmd) {
-      case "f" || "full":
-        mbe.spawnFull();
-        break;
-      case "m" || "mini":
-        mbe.spawnMini();
-        break;
-    }
-  }
+const fullRegInfo: registerInformation = {
+  name: "full",
+  aliases: ["f"],
+  description: "Spawn full MBE",
+  usage: [
+    {
+      name: "tileName",
+      type: "string",
+      default: false,
+    },
+    {
+      name: "position",
+      type: "xyz",
+      default: false,
+    },
+  ],
+};
+
+const miniRegInfo: registerInformation = {
+  name: "mini",
+  aliases: ["m"],
+  description: "Spawn mini MBE",
+  usage: [
+    {
+      name: "tileName",
+      type: "string",
+      default: false,
+    },
+    {
+      name: "position",
+      type: "xyz",
+      default: false,
+    },
+  ],
+};
+
+Server.command.register(fullRegInfo, (session, msg, args) => {
+  new MBE(session, args.get("tileName"), args.get("position")).spawnFull();
+  return void 0;
+});
+
+Server.command.register(miniRegInfo, (session, msg, args) => {
+  new MBE(session, args.get("tileName"), args.get("position")).spawnMini();
+  return void 0;
 });
 
 sv.system.afterEvents.scriptEventReceive.subscribe(

@@ -47,7 +47,7 @@ export class MBE {
   }
 
   private positionFormat(pos: string) {
-    return pos.match(/\^|~-?(\d?)+|(?<=\s)-?\d+/g);
+    return pos.match(/(\^|~)(-?\.?\d+|\d?)|(?<=\s)-?\.?\d+/g);
   }
 
   private spawnArmorStand(callback: (mbe: sv.Entity) => void) {
