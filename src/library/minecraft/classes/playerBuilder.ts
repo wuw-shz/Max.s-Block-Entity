@@ -1,6 +1,7 @@
 import * as Minecraft from "@minecraft/server";
 import * as Math from "@lib/math";
 import { getItemCountReturn } from "../@types/classes/PlayerBuilder.js";
+import { Block, Entity } from "@minecraft/server";
 
 type Player = Minecraft.Player;
 
@@ -11,7 +12,7 @@ export class PlayerBuilder {
    * @param {string} perm The permission string being tested
    * @returns {boolean}
    */
-  hasPermission(player: Player, perm: string) {
+  hasPermission(player: Player | Entity | Block, perm: string) {
     if (!perm) return true;
 
     let included = false;

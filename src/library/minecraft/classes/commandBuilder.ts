@@ -536,7 +536,7 @@ export class CommandBuilder {
   }
 
   callCommand(
-    player: Player,
+    player: Player | Entity | Block,
     command: string,
     args: Array<string> | string = []
   ) {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Thread } from "@lib/minecraft";
-import { Player } from "@minecraft/server";
+import { Block, Entity, Player } from "@minecraft/server";
 
 export type range = [number | null, number | null];
 
@@ -45,5 +45,5 @@ export interface registerInformation {
     aliases?: Array<string>;
 }
 export interface storedRegisterInformation extends registerInformation {
-    callback: (player: Player, msg: string, args: Map<string, any>) => Thread<any[]>;
+    callback: (player: Player | Entity | Block, msg: string, args: Map<string, any>) => Thread<any[]>;
 }
